@@ -1,3 +1,5 @@
+import 'package:design_code_course/components/certificate_viewer.dart';
+import 'package:design_code_course/components/lists/continue_watching_lists.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import '../constants.dart';
@@ -46,6 +48,10 @@ class ContinueWatchingScreen extends StatelessWidget {
             ),
           ),
           Padding(
+            padding: EdgeInsets.symmetric(vertical: 24.0),
+            child: ContinueWatchingList(),
+          ),
+          Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 32.0,
             ),
@@ -54,8 +60,20 @@ class ContinueWatchingScreen extends StatelessWidget {
               style: kTitle2Style,
             ),
           ),
+          Expanded(
+            child: CertificateViewer()
+          ),
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
